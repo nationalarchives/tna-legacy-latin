@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+	/* fonts defined in encompassing doc? */
+	body, td {font: 11px Verdana, Arial, Helvetica, sans-serif;}
+	td {vertical-align: top; background-color: #E8E1BB; border: 1px #FCF4E3 solid; padding-right: 5px;}
+	a {display: block; height: 100%; padding: 18px 0px 5px 5px; text-decoration: none; color: #000000; cursor: default;}
+	.trans_highlight {border: 1px #999966 solid;}
+	
+	#lat_0, #eng_1 {background-image: url("images/bgrd_1.gif"); background-repeat: no-repeat;}
+	#lat_1, #eng_2 {background-image: url("images/bgrd_2.gif"); background-repeat: no-repeat;}
+	#lat_2, #eng_3 {background-image: url("images/bgrd_3.gif"); background-repeat: no-repeat;}
+	#lat_3, #eng_4 {background-image: url("images/bgrd_4.gif"); background-repeat: no-repeat;}
+	#lat_4, #eng_0 {background-image: url("images/bgrd_5.gif"); background-repeat: no-repeat;}
+	
+</style>
+<script type="text/javascript">
+<!--//
+	// FUNCTION 		highlight()
+	// PARAMETERS		lngCell1 (long), lngCell2 (long), blnHighlight (boolean)
+	// AUTHOR				Russ Back
+	// PURPOSE			Switches the CSS class of 2 table cells
+
+	function highlight (lngCell1, lngCell2, blnHighlight) {
+		// check for netscape 4
+		var blnNs4 = (document.layers && !document.getElementById) ? true:false;
+		// default to inactive state
+		var strClassName = "";
+		// assign class name if highlight/active state requested
+		if (blnHighlight) strClassName = "trans_highlight";
+		// if not NS4
+		if (! blnNs4) {
+			// highlight cells
+			document.getElementById("lat_" + lngCell1).className = strClassName;
+			document.getElementById("eng_" + lngCell2).className = strClassName;
+			}
+		}
+			
+//-->
+</script>
+<!--#include virtual="/includes/ga.inc" -->
+</head>
+
+<body>
+
+<p>Mouse over or tab through each text extract to highlight its latin or English translation (not NS4). </p>
+<table width="405" id="trans" border="0" cellspacing="3" cellpadding="0" summary="This table contains a breakdown of the latin phrase and its English translation.">
+  <tr>
+    <td width="20%" id="lat_0"><a href="#" title="anno regni" onfocus="highlight(0,1,true);" onblur="highlight(0,1,false);" onmouseover="highlight(0,1,true);" onmouseout="highlight(0,1,false);"><em>anno regni</em></a></td>
+    <td width="20%" id="lat_1"><a href="#" title="regis Edwardi" onfocus="highlight(1,2,true);" onblur="highlight(1,2,false);" onmouseover="highlight(1,2,true);" onmouseout="highlight(1,2,false);"><em>regis Edwardi</em></a></td>
+    <td width="20%" id="lat_2"><a href="#" title="quarti" onfocus="highlight(2,3,true);" onblur="highlight(2,3,false);" onmouseover="highlight(2,3,true);" onmouseout="highlight(2,3,false);"><em>quarti</em></a></td>
+    <td width="20%" id="lat_3"><a href="#" title="post conquestum" onfocus="highlight(3,4,true);" onblur="highlight(3,4,false);" onmouseover="highlight(3,4,true);" onmouseout="highlight(3,4,false);"><em>post conquestum</em></a></td>
+    <td width="20%" id="lat_4"><a href="#" title="primo" onfocus="highlight(4,1,true);" onblur="highlight(4,0,false);" onmouseover="highlight(4,0,true);" onmouseout="highlight(4,0,false);"><em>primo</em></a></td>
+  </tr>
+  <tr>
+    <td width="20%" id="eng_0"><a href="#" title="in the first" onmouseover="highlight(4,0,true);" onmouseout="highlight(4,0,false);" onfocus="highlight(4,0,true);" onblur="highlight(4,0,false);">in the first</a></td>
+    <td width="20%" id="eng_1"><a href="#" title="year of the reign" onmouseover="highlight(0,1,true);" onmouseout="highlight(0,1,false);" onfocus="highlight(0,1,true);" onblur="highlight(0,1,false);">year of the reign</a></td>
+    <td width="20%" id="eng_2"><a href="#" title="of King Edward" onmouseover="highlight(1,2,true);" onmouseout="highlight(1,2,false);" onfocus="highlight(1,2,true);" onblur="highlight(1,2,false);">of King Edward</a></td>
+    <td width="20%" id="eng_3"><a href="#" title="the fourth" onmouseover="highlight(2,3,true);" onmouseout="highlight(2,3,false);" onfocus="highlight(2,3,true);" onblur="highlight(2,3,false);">the fourth</a></td>
+    <td width="20%" id="eng_4"><a href="#" title="since the Conquest" onmouseover="highlight(3,4,true);" onmouseout="highlight(3,4,false);" onfocus="highlight(3,4,true);" onblur="highlight(3,4,false);">since the Conquest</a></td>
+  </tr>
+</table>
+
+
+<p>CHANGES MADE TO DEV:</p>
+<ul>
+  <li> css/latin.css</li>
+  <li>scripts/latin.js</li>
+  <li>latin/beginners/lesson11/default.html </li>
+</ul>
+</body>
+</html>
