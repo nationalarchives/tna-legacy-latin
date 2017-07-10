@@ -1,0 +1,15 @@
+.notification-banner {
+    background-color: #fce45c;
+    margin: 0em;
+    padding: .5em 0;
+    width: 100%;
+}
+.tna-notification-banner .notice {
+    margin: 0.3em;
+    padding: 0.3em;
+}
+.title {
+    background-color: #fff;
+    padding: 0 .4em;
+    margin: 1em;
+}
