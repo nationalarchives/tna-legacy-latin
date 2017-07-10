@@ -50,9 +50,13 @@
 
 <script language="javascript" type="text/javascript" src="/script/swfobject.js"></script>
 <!--#include virtual="/includes/ga.inc" -->
+<link href="/latin/css/latin-extra.css" type="text/css" rel="stylesheet" media="screen" />
 </head>
 
+
 <body onload="focusOnText();">
+<!--#include virtual="/latin/inc/survey-banner.inc" -->
+
 
 
 
